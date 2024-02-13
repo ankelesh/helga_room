@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkv7um63wxfqb"]
+
+[ext_resource type="Script" path="res://objects/player_body.gd" id="1_c1d7v"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yequp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xh7e"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_g25hy"]
+material = SubResource("StandardMaterial3D_3xh7e")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_o2ca3"]
+
+[node name="Player_view" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_c1d7v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_yequp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("SphereMesh_g25hy")
+skeleton = NodePath("../..")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.883774, 0.467914, 0, -0.467914, 0.883774, 0, 0.529565, 0.353584)
+margin = 0.1
+
+[node name="view_camera" type="Camera3D" parent="CharacterBody3D/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0.0741728, 0.81811)
+attributes = SubResource("CameraAttributesPractical_o2ca3")

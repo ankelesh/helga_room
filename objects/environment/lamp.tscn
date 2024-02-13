@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://gcbwsur2d87s"]
+
+[ext_resource type="PackedScene" uid="uid://b4faibqiwne0b" path="res://objects/environment/lamp_no_light.tscn" id="1_lhydp"]
+
+[node name="Lamp" type="Node3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.0145985, -0.986912, 0.160597, -0.0893435, 0.161259, 0.98286, -0.995894, 0, -0.0905283, 0.0362056, 1.08176, 0.0645995)
+light_color = Color(1, 0.839216, 0.505882, 1)
+shadow_enabled = true
+distance_fade_begin = 0.1
+distance_fade_length = 2.0
+
+[node name="LightsPunctualLamp" parent="." instance=ExtResource("1_lhydp")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205225, 0.159564, 0.127456)
+light_color = Color(1, 0.839216, 0.505882, 1)
+light_energy = 1.485
+light_indirect_energy = 1.324
+light_volumetric_fog_energy = 1.808
+shadow_enabled = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4faibqiwne0b"]
+
+[ext_resource type="PackedScene" uid="uid://dbldy3lt5s3ll" path="res://resources/objects/furniture/LightsPunctualLamp.glb" id="1_51jps"]
+
+[node name="LightsPunctualLamp" instance=ExtResource("1_51jps")]
+
+[node name="Point_Orientation" parent="." index="3"]
+visible = false
+
+[node name="Point_002_Orientation" parent="." index="4"]
+visible = false
+
+[node name="Point_001_Orientation" parent="." index="5"]
+visible = false
+
+[node name="Point_003_Orientation" parent="." index="6"]
+visible = false
+
+[node name="Point_004_Orientation" parent="." index="7"]
+visible = false

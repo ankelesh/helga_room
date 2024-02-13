@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://coytgurntvjwl"]
+
+[ext_resource type="PackedScene" uid="uid://bs3j3u1v4dd1f" path="res://resources/objects/furniture/столик.glb" id="1_2t3ik"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1jyb"]
+size = Vector3(3.4, 1, 1.2)
+
+[node name="Table" type="Node3D"]
+
+[node name="столик2" parent="." instance=ExtResource("1_2t3ik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.463503, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="столик2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="столик2/StaticBody3D"]
+shape = SubResource("BoxShape3D_n1jyb")
