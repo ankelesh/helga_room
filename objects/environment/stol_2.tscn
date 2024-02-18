@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0j601bjl6lpy"]
+
+[ext_resource type="PackedScene" uid="uid://bh3k0ew6fbj0l" path="res://resources/objects/furniture/Lantern.glb" id="1_3bghh"]
+
+[node name="stol2" type="Node3D"]
+
+[node name="Lantern2" parent="." instance=ExtResource("1_3bghh")]

@@ -1,79 +1,51 @@
-[gd_scene load_steps=25 format=3 uid="uid://cvbcnr3fhgp1i"]
+[gd_scene load_steps=22 format=3 uid="uid://cvbcnr3fhgp1i"]
 
-[ext_resource type="Texture2D" uid="uid://g0xfkce3pxma" path="res://resources/objects/furniture/Woof_Planks_Albedo.jpg" id="1_va24l"]
+[ext_resource type="Material" uid="uid://dw73u388ne3hp" path="res://resources/objects/furniture/plank_wall.tres" id="1_n1aj6"]
 [ext_resource type="PackedScene" uid="uid://gcbwsur2d87s" path="res://objects/environment/lamp.tscn" id="3_2ck2o"]
-[ext_resource type="Texture2D" uid="uid://tx7b7gik0lhl" path="res://resources/objects/furniture/Woof_Planks_Occlusion.jpg" id="3_3r6vf"]
-[ext_resource type="PackedScene" uid="uid://btsuhs5seslyh" path="res://objects/environment/table_collidable.tscn" id="4_0qfgh"]
-[ext_resource type="Texture2D" uid="uid://bdqa5fb85hx7s" path="res://resources/objects/furniture/Woof_Planks_Height.jpg" id="4_1tcpy"]
 [ext_resource type="PackedScene" uid="uid://bkv7um63wxfqb" path="res://objects/player_view.tscn" id="4_4884a"]
-[ext_resource type="Texture2D" uid="uid://6x4b8f4gkq1j" path="res://resources/objects/furniture/Woof_Planks_Metallic.jpg" id="5_fjid1"]
-[ext_resource type="Texture2D" uid="uid://bnv5dtn7blb3t" path="res://resources/objects/furniture/Woof_Planks_Normal.jpg" id="6_bppkj"]
+[ext_resource type="PackedScene" uid="uid://t7fqb6dvgkyb" path="res://resources/objects/furniture/коврик.glb" id="5_exavq"]
+[ext_resource type="PackedScene" uid="uid://cpcg2ym50eoa3" path="res://resources/objects/furniture/коробочка закрытая.glb" id="7_twgxd"]
+[ext_resource type="PackedScene" uid="uid://btq42kfy5fx3m" path="res://objects/environment/столик_отдельно.tscn" id="8_eps0x"]
+[ext_resource type="PackedScene" uid="uid://b2bmsvox0y3k0" path="res://objects/environment/коробочки.tscn" id="8_g5nga"]
+[ext_resource type="PackedScene" uid="uid://tda36ofa82nn" path="res://resources/objects/furniture/книжечки.glb" id="9_uxi7r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r5ux4"]
 size = Vector3(10, 0.1, 10)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3oylj"]
-albedo_texture = ExtResource("1_va24l")
-uv1_scale = Vector3(20, 20, 20)
-uv2_scale = Vector3(20, 20, 20)
-
 [sub_resource type="BoxMesh" id="BoxMesh_i0obo"]
-material = SubResource("StandardMaterial3D_3oylj")
+material = ExtResource("1_n1aj6")
 size = Vector3(10, 0.1, 10)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubw1g"]
-albedo_texture = ExtResource("1_va24l")
-metallic = 1.0
-metallic_texture = ExtResource("5_fjid1")
-normal_enabled = true
-normal_texture = ExtResource("6_bppkj")
-ao_enabled = true
-ao_texture = ExtResource("3_3r6vf")
-heightmap_enabled = true
-heightmap_texture = ExtResource("4_1tcpy")
-uv1_scale = Vector3(20, 20, 20)
-uv2_scale = Vector3(20, 20, 20)
-texture_filter = 5
-point_size = 0.1
-
 [sub_resource type="BoxMesh" id="BoxMesh_mxlgi"]
-material = SubResource("StandardMaterial3D_ubw1g")
+material = ExtResource("1_n1aj6")
 size = Vector3(10, 3, 0.1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_02nvy"]
 points = PackedVector3Array(-5.07738, -1.57905, -0.129365, 5.07738, 1.59493, 0.188095, 5.07738, 1.59493, -0.129365, -5.07738, 1.59493, 0.188095, 5.07738, -1.57905, 0.188095, 5.07738, -1.57905, -0.129365, -5.07738, 1.59493, -0.129365, -5.07738, -1.57905, 0.188095)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yombj"]
-albedo_texture = ExtResource("1_va24l")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o3620"]
+load_path = "res://.godot/imported/Woof_Planks_Albedo.jpg-6fe135cc87ca4a0d3c6d9022aed80ac4.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ad8wm"]
+albedo_texture = SubResource("CompressedTexture2D_o3620")
 uv1_scale = Vector3(20, 20, 20)
-texture_filter = 5
 
 [sub_resource type="BoxMesh" id="BoxMesh_asdnm"]
-material = SubResource("StandardMaterial3D_yombj")
+material = SubResource("StandardMaterial3D_ad8wm")
 size = Vector3(10, 3, 0.1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l64j8"]
 points = PackedVector3Array(-5.07738, -1.57905, -0.129365, 5.07738, 1.59493, 0.188095, 5.07738, 1.59493, -0.129365, -5.07738, 1.59493, 0.188095, 5.07738, -1.57905, 0.188095, 5.07738, -1.57905, -0.129365, -5.07738, 1.59493, -0.129365, -5.07738, -1.57905, 0.188095)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8i3w"]
-albedo_texture = ExtResource("1_va24l")
-uv1_scale = Vector3(20, 20, 20)
-texture_filter = 5
-
 [sub_resource type="BoxMesh" id="BoxMesh_ysmgj"]
-material = SubResource("StandardMaterial3D_x8i3w")
+material = ExtResource("1_n1aj6")
 size = Vector3(0.1, 3, 10.2)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1qvjj"]
 points = PackedVector3Array(0.192857, 1.65714, 5.18095, -0.130952, -1.58095, -5.18095, 0.192857, -1.58095, -5.18095, -0.130952, -1.58095, 5.18095, -0.130952, 1.65714, -5.18095, 0.192857, 1.65714, -5.18095, 0.192857, -1.58095, 5.18095, -0.130952, 1.65714, 5.18095)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82pl2"]
-albedo_texture = ExtResource("1_va24l")
-uv1_scale = Vector3(20, 20, 20)
-texture_filter = 5
-
 [sub_resource type="BoxMesh" id="BoxMesh_80fmw"]
-material = SubResource("StandardMaterial3D_82pl2")
+material = ExtResource("1_n1aj6")
 size = Vector3(0.1, 3, 10.2)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_57xw7"]
@@ -94,7 +66,7 @@ shape = SubResource("BoxShape3D_r5ux4")
 mesh = SubResource("BoxMesh_i0obo")
 
 [node name="Lamp" parent="." instance=ExtResource("3_2ck2o")]
-transform = Transform3D(-0.389978, 0, -0.0889802, 0, 0.4, 0, 0.0889802, 0, -0.389978, -0.156013, 0.948224, 3.95332)
+transform = Transform3D(0.235476, 0, -0.323345, 0, 0.4, 0, 0.323345, 0, 0.235476, 0.497238, 0.959539, 2.3838)
 
 [node name="wall_n" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
@@ -154,5 +126,20 @@ shape = SubResource("ConvexPolygonShape3D_aqoc0")
 [node name="Player_view" parent="." instance=ExtResource("4_4884a")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.118985, 0.54227, 0.357725)
 
-[node name="table_collidable" parent="." instance=ExtResource("4_0qfgh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.537446, 0, 4.10112)
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.659664, 2.28159, 0.251597)
+
+[node name="коврик" parent="." instance=ExtResource("5_exavq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0272466, 0, 2.28623)
+
+[node name="коробочка закрытая2" parent="." instance=ExtResource("7_twgxd")]
+transform = Transform3D(0.973599, -0.0273633, -0.226617, 0.0266509, 0.999626, -0.00620333, 0.226702, 0, 0.973964, 0.974501, 0.871214, 2.51121)
+
+[node name="коробочки" parent="." instance=ExtResource("8_g5nga")]
+transform = Transform3D(0.954204, 0, 0.299157, 0, 1, 0, -0.299157, 0, 0.954204, 1.31555, 0.876306, 2.52626)
+
+[node name="столик отдельно" parent="." instance=ExtResource("8_eps0x")]
+transform = Transform3D(0.99986, 0, -0.0167199, 0, 1, 0, 0.0167199, 0, 0.99986, 0.134139, -0.0274271, 2.20957)
+
+[node name="книжечки" parent="." instance=ExtResource("9_uxi7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0999996, -0.0237087, 2.19388)

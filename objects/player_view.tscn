@@ -25,9 +25,14 @@ mesh = SubResource("SphereMesh_g25hy")
 skeleton = NodePath("../..")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.883774, 0.467914, 0, -0.467914, 0.883774, 0, 0.529565, 0.353584)
+transform = Transform3D(1, 0, 0, 0, 0.883774, 0.467914, 0, -0.467914, 0.883774, 0, 0.196115, -0.959314)
 margin = 0.1
 
 [node name="view_camera" type="Camera3D" parent="CharacterBody3D/SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0.0741728, 0.81811)
+transform = Transform3D(1, 0, 0, 0, 0.806899, -0.59069, 0, 0.59069, 0.806899, 0, 0.0741729, 0.81811)
 attributes = SubResource("CameraAttributesPractical_o2ca3")
+
+[node name="fonarik" type="SpotLight3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.389975, -0.600061)
+spot_range = 6.341
+spot_angle = 53.58

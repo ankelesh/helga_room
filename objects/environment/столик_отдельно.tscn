@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://btq42kfy5fx3m"]
+
+[ext_resource type="PackedScene" uid="uid://b8w08wnx4wr3x" path="res://resources/objects/furniture/столик отдельно.glb" id="1_7xkth"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8v1tc"]
+points = PackedVector3Array(1.4979, 0.715797, 0.61739, 0, 0.760591, -0.679548, 0, 0.915042, -0.679548, 1.64785, 0.760591, -0.679548, 1.64785, 0.915042, 0.710824, 0, 0.915042, 0.710824, 1.64785, 0.915042, -0.679548, 0, 0.760591, 0.710824, 0.721175, 0.709101, -0.627967, 0.721175, 0.709101, 0.659243, 1.64785, 0.760591, 0.710824, 1.4979, 0.715797, -0.586113)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1efq3"]
+points = PackedVector3Array(0.720933, 0.142689, -0.679548, 1.54486, 0.142689, 0.710824, 1.51739, -0.0376, 0.664478, 0.720933, 0.142689, 0.710824, 1.54486, 0.709081, -0.627967, 0.720933, 0.709081, 0.659243, 1.51739, -0.0376, -0.633202, 1.54486, 0.709081, 0.659243, 0.720933, 0.709081, -0.627967, 0.748397, -0.0376, 0.664478, 0.748397, -0.0376, -0.633202, 1.54486, 0.142689, -0.679548)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vrdkw"]
+points = PackedVector3Array(-0.7752, 0.71426, 0.626998, -1.64785, 0.760591, -0.679548, -1.64785, 0.915042, -0.679548, 0, 0.760591, -0.679548, 0, 0.915042, 0.710824, -1.64785, 0.915042, 0.710824, 0, 0.915042, -0.679548, -1.64785, 0.760591, 0.710824, 0, 0.760591, 0.710824, -1.5025, 0.71514, -0.59022, -0.7752, 0.71426, -0.595722, -1.5025, 0.71514, 0.621497)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_icvig"]
+points = PackedVector3Array(-1.5025, 0.669371, -0.561792, -0.720933, 0.142689, 0.710824, -0.748397, -0.0376, 0.664478, -0.720933, 0.142689, -0.679548, -1.51739, -0.0376, -0.633202, -1.51739, -0.0376, 0.664478, -0.78128, 0.69964, 0.64351, -1.5025, 0.669371, 0.593069, -0.780082, 0.700923, -0.614371, -0.748397, -0.0376, -0.633202)
+
+[node name="столик отдельно" instance=ExtResource("1_7xkth")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="столик" index="0"]
+
+[node name="@CollisionShape3D@22091" type="CollisionShape3D" parent="столик/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_8v1tc")
+
+[node name="@CollisionShape3D@22090" type="CollisionShape3D" parent="столик/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_1efq3")
+
+[node name="@CollisionShape3D@22089" type="CollisionShape3D" parent="столик/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_vrdkw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="столик/StaticBody3D" index="3"]
+shape = SubResource("ConvexPolygonShape3D_icvig")

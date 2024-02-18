@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbia5drefapkj"]
+
+[ext_resource type="PackedScene" uid="uid://cpcg2ym50eoa3" path="res://resources/objects/furniture/коробочка закрытая.glb" id="1_ga4sk"]
+
+[node name="коробочка закрытая2" instance=ExtResource("1_ga4sk")]

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dvme8eotdrr8s"]
+
+[ext_resource type="Texture2D" uid="uid://b0yc76vwk5r8v" path="res://resources/objects/furniture/коробочки_ntrcneh.png" id="1_3edgw"]
+[ext_resource type="Texture2D" uid="uid://bgujhdbd1of18" path="res://resources/objects/furniture/коробочки_РАФНЕСС.png" id="2_jechq"]
+
+[resource]
+resource_name = "Material.008"
+cull_mode = 2
+albedo_texture = ExtResource("1_3edgw")
+metallic_texture = ExtResource("2_jechq")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_jechq")
+roughness_texture_channel = 1
